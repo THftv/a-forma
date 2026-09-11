@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Forma — Impressão 3D personalizada | Chaveiros, placas e presentes sob encomenda</title>
+<meta name="description" content="A Forma imprime em 3D chaveiros, placas, kits e peças decorativas personalizadas com o seu nome ou sua ideia. Peça pelo WhatsApp e receba em todo o Brasil.">
+<meta name="keywords" content="impressão 3D, impressão 3D personalizada, chaveiro 3D, placa personalizada, presente personalizado, loja de impressão 3D">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.aforma3d.com.br/">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="A Forma">
+<meta property="og:title" content="A Forma — Impressão 3D personalizada">
+<meta property="og:description" content="Chaveiros, placas, kits e peças decorativas impressos em 3D, do seu jeito. Peça pelo WhatsApp.">
+<meta property="og:image" content="https://www.aforma3d.com.br/og-image.jpg">
+<meta property="og:url" content="https://www.aforma3d.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0C'/%3E%3Cpolygon points='50,20 20,75 80,75' fill='none' stroke='%23D6FF3F' stroke-width='9'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- JSON-LD: edite os dados abaixo com as informações reais da loja -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "A Forma",
+  "description": "Loja de impressão 3D personalizada: chaveiros, placas, kits e peças decorativas sob encomenda.",
+  "image": "https://www.aforma3d.com.br/og-image.jpg",
+  "telephone": "+55XXXXXXXXXXX",
+  "email": "contato@aforma3d.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/aforma3d"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg: #0B0B0C;
+    --bg-alt: #131315;
+    --surface: #18181B;
+    --line: #29292C;
+    --lime: #D6FF3F;
+    --lime-dim: #A8CC2E;
+    --ink: #F2F1EA;
+    --ink-dim: #98978F;
+    --radius-pill: 999px;
+    --radius-sm: 3px;
+    --maxw: 1180px;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *,*::before,*::after{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,svg{ display:block; max-width:100%; }
+  a{ color: inherit; text-decoration: none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3{ font-family: var(--font-display); font-weight: 700; line-height: 1.08; margin: 0; color: var(--ink); }
+  p{ margin: 0; }
+
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background: var(--lime); color:#0B0B0C; padding: 10px 16px; border-radius: var(--radius-sm);
+    font-family: var(--font-body); font-weight:600; z-index: 200;
+  }
+  .skip-link:focus{ left: 16px; top: 16px; }
+
+  :focus-visible{ outline: 2px solid var(--lime); outline-offset: 3px; }
+
+  .mono-tag{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--lime-dim);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 14px 26px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-body); font-weight: 600; font-size: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover{ transform: translateY(-1px); }
+  .btn-primary{ background: var(--lime); color: #0B0B0C; }
+  .btn-primary:hover{ background: var(--lime-dim); }
+  .btn-outline{ background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-outline:hover{ border-color: var(--ink-dim); }
+  .btn-sm{ padding: 10px 18px; font-size: 14px; }
+
+  .btn-wa svg{ width:18px; height:18px; flex-shrink:0; }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position: sticky; top:0; z-index: 100;
+    background: rgba(11,11,12,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 16px 24px;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family: var(--font-display); font-weight: 800; font-size: 19px;
+    letter-spacing: 0.01em;
+  }
+  .logo svg{ width:26px; height:26px; }
+  .nav-links{ display:flex; align-items:center; gap:32px; }
+  .nav-links a{
+    font-size: 14.5px; color: var(--ink-dim); font-weight: 500;
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover{ color: var(--ink); }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+
+  .nav-toggle{
+    display:none; background:none; border:1px solid var(--line); border-radius: var(--radius-sm);
+    width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .nav-toggle svg{ width:20px; height:20px; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 88px 0 96px;
+    border-bottom: 1px solid var(--line);
+    background:
+      radial-gradient(circle at 82% 18%, rgba(214,255,63,0.09), transparent 45%);
+  }
+  .hero .wrap{ display:grid; grid-template-columns: 1.05fr 0.85fr; gap: 64px; align-items:center; }
+  .hero-eyebrow{ display:flex; align-items:center; gap:10px; margin-bottom: 22px; }
+  .hero-eyebrow .dot{ width:7px; height:7px; border-radius:50%; background: var(--lime); flex-shrink:0; }
+  .hero h1{ font-size: clamp(2.3rem, 4.2vw, 3.4rem); letter-spacing: -0.01em; }
+  .hero h1 em{ font-style: normal; color: var(--lime); }
+  .hero-sub{ margin-top: 22px; font-size: 17px; color: var(--ink-dim); max-width: 46ch; }
+  .hero-cta{ display:flex; gap:14px; margin-top: 34px; flex-wrap: wrap; }
+  .hero-trust{
+    display:flex; gap:28px; margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .trust-item .num{ font-family: var(--font-display); font-size: 1.5rem; font-weight:700; color: var(--ink); display:block; }
+  .trust-item .label{ font-size: 13px; color: var(--ink-dim); margin-top:2px; display:block; }
+
+  /* hero print visual */
+  .hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; }
+  .print-frame{
+    position:relative; width: 100%; max-width: 380px; aspect-ratio: 4/5;
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    background: var(--surface);
+    overflow:hidden;
+    animation: frame-in 0.7s ease both;
+  }
+  @keyframes frame-in{ from{ opacity:0; transform: scale(0.97); } to{ opacity:1; transform:scale(1); } }
+  @media (prefers-reduced-motion: reduce){ .print-frame{ animation:none; } }
+  .print-frame img{
+    width:100%; height:100%; object-fit: cover; display:block;
+  }
+  .print-frame::after{
+    content:''; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(11,11,12,0) 55%, rgba(11,11,12,0.85) 100%);
+    pointer-events:none;
+  }
+  .print-caption{
+    position:absolute; bottom:14px; left:14px; right:14px; z-index:1;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .section-head{ max-width: 620px; margin-bottom: 52px; }
+  .section-head .mono-tag{ display:block; margin-bottom: 14px; }
+  .section-head h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); }
+  .section-head p{ margin-top: 16px; color: var(--ink-dim); font-size: 16px; }
+
+  /* ---------- Categories ---------- */
+  .cat-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .cat-card{ background: var(--bg); display:flex; flex-direction:column; }
+  .cat-photo{ width:100%; aspect-ratio: 4/3; overflow:hidden; background: var(--surface); }
+  .cat-photo img{ width:100%; height:100%; object-fit: cover; display:block; transition: transform 0.35s ease; }
+  .cat-card:hover .cat-photo img{ transform: scale(1.04); }
+  .cat-body{ padding: 26px 26px 30px; display:flex; flex-direction:column; gap:14px; flex:1; }
+  .cat-card h3{ font-size: 1.05rem; }
+  .cat-card p{ color: var(--ink-dim); font-size: 14.5px; }
+  .cat-card .mono-tag{ margin-top:auto; padding-top: 14px; border-top: 1px solid var(--line); }
+
+  /* ---------- Personalização ---------- */
+  .custom{ background: var(--bg-alt); }
+  .custom .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items:center; }
+  .custom-list{ margin-top: 28px; display:flex; flex-direction:column; gap: 18px; }
+  .custom-list li{ display:flex; gap:14px; align-items:flex-start; font-size: 15px; color: var(--ink-dim); }
+  .custom-list svg{ width:18px; height:18px; flex-shrink:0; margin-top:3px; color: var(--lime); }
+  .custom-list b{ color: var(--ink); font-weight: 600; }
+
+  .plaque-demo{ display:flex; align-items:center; justify-content:center; }
+  .plaque{
+    position:relative; width: 100%; max-width: 320px; aspect-ratio: 4/5;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+    overflow:hidden;
+  }
+  .plaque img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .plaque::after{
+    content:''; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(11,11,12,0) 60%, rgba(11,11,12,0.88) 100%);
+  }
+  .plaque-caption{
+    position:absolute; bottom:16px; left:16px; right:16px; z-index:1;
+  }
+  .plaque-caption .plaque-name{ font-family: var(--font-display); font-weight:700; font-size: 1.1rem; display:block; }
+  .plaque-caption .plaque-role{ font-family: var(--font-mono); font-size: 12px; color: var(--lime-dim); display:block; margin-top:4px; }
+
+  /* ---------- Como funciona ---------- */
+  .steps{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .step{ border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 26px 22px; background: var(--bg); }
+  .step-num{
+    font-family: var(--font-mono); font-size: 13px; color: var(--lime);
+    display:flex; align-items:center; gap:10px; margin-bottom: 18px;
+  }
+  .step-num::before{
+    content:''; width:26px; height:1px; background: var(--line);
+  }
+  .step h3{ font-size: 1.02rem; margin-bottom: 8px; }
+  .step p{ font-size: 14px; color: var(--ink-dim); }
+
+  /* ---------- Materiais ---------- */
+  .materials{ background: var(--bg-alt); }
+  .mat-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .mat-card{ background: var(--bg-alt); padding: 30px 26px; }
+  .mat-card .mono-tag{ font-size: 13px; color: var(--lime); margin-bottom: 10px; display:block; }
+  .mat-card h3{ font-size: 1.1rem; margin-bottom: 10px; }
+  .mat-card p{ font-size: 14px; color: var(--ink-dim); }
+
+  /* ---------- Vídeo de demonstração ---------- */
+  .video-frame{
+    position:relative; width:100%; max-width: 860px; margin: 0 auto;
+    aspect-ratio: 16/9;
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    background: var(--surface);
+    overflow:hidden;
+  }
+  .video-frame iframe,
+  .video-frame video{
+    position:absolute; inset:0; width:100%; height:100%; border:0; display:block; object-fit:cover;
+  }
+  .video-placeholder{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;
+    text-align:center; padding: 24px;
+  }
+  .video-placeholder .play-icon{
+    width:64px; height:64px; border-radius:50%;
+    border: 1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .video-placeholder .play-icon svg{ width:20px; height:20px; color: var(--lime); margin-left:3px; }
+  .video-placeholder p{ font-size: 14.5px; color: var(--ink-dim); max-width: 32ch; }
+
+  /* ---------- Social proof ---------- */
+  .proof .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .quote{ border-left: 2px solid var(--lime); padding-left: 20px; margin-bottom: 32px; }
+  .quote p{ font-size: 16px; color: var(--ink); }
+  .quote cite{ display:block; margin-top: 10px; font-style:normal; font-size: 13.5px; color: var(--ink-dim); }
+  .insta-card{
+    border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 30px;
+    display:flex; flex-direction:column; gap: 16px; align-items:flex-start;
+    background: var(--surface);
+  }
+  .insta-card svg{ width:30px; height:30px; color: var(--lime); }
+  .insta-card h3{ font-size: 1.1rem; }
+  .insta-card p{ color: var(--ink-dim); font-size: 14.5px; }
+
+  /* ---------- CTA final ---------- */
+  .cta-final{ border-bottom:none; padding: 90px 0; }
+  .cta-box{
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    padding: 60px 48px; text-align:center;
+    background: radial-gradient(circle at 50% 0%, rgba(214,255,63,0.08), transparent 60%);
+  }
+  .cta-box h2{ font-size: clamp(1.8rem, 3.6vw, 2.6rem); max-width: 18ch; margin: 0 auto; }
+  .cta-box p{ margin-top: 16px; color: var(--ink-dim); font-size: 16px; }
+  .cta-box .hero-cta{ justify-content:center; margin-top: 30px; }
+
+  /* ---------- Footer ---------- */
+  footer{ padding: 56px 0 32px; }
+  .footer-top{ display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-about .logo{ margin-bottom: 16px; }
+  .footer-about p{ color: var(--ink-dim); font-size: 14.5px; max-width: 34ch; }
+  .footer-col h4{ font-family: var(--font-body); font-size: 13px; color: var(--ink-dim); margin-bottom: 18px; font-weight:600; }
+  .footer-col ul{ display:flex; flex-direction:column; gap: 12px; }
+  .footer-col a{ font-size: 14.5px; color: var(--ink); transition: color 0.15s ease; }
+  .footer-col a:hover{ color: var(--lime); }
+  .footer-bottom{
+    padding-top: 28px; border-top: 1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  .footer-bottom p{ font-size: 13px; color: var(--ink-dim); }
+
+  /* ---------- WhatsApp flutuante ---------- */
+  .wa-float{
+    position: fixed; bottom: 22px; right: 22px; z-index: 150;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: var(--lime); color:#0B0B0C;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    animation: wa-pulse 2.2s ease-out 1;
+    animation-delay: 1.4s;
+  }
+  .wa-float svg{ width:28px; height:28px; }
+  @keyframes wa-pulse{
+    0%{ box-shadow: 0 6px 24px rgba(0,0,0,0.4), 0 0 0 0 rgba(214,255,63,0.5); }
+    70%{ box-shadow: 0 6px 24px rgba(0,0,0,0.4), 0 0 0 16px rgba(214,255,63,0); }
+    100%{ box-shadow: 0 6px 24px rgba(0,0,0,0.4), 0 0 0 0 rgba(214,255,63,0); }
+  }
+  @media (prefers-reduced-motion: reduce){ .wa-float{ animation:none; } }
+
+  /* ---------- Responsivo ---------- */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual{ order:-1; }
+    .cat-grid{ grid-template-columns: repeat(2, 1fr); }
+    .steps{ grid-template-columns: repeat(2, 1fr); }
+    .mat-grid{ grid-template-columns: 1fr; }
+    .custom .wrap{ grid-template-columns: 1fr; gap: 40px; }
+    .custom .plaque-demo{ order:-1; }
+    .proof .wrap{ grid-template-columns: 1fr; gap: 40px; }
+    .footer-top{ grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 720px){
+    .nav-links, .nav-cta .btn-outline{ display:none; }
+    .nav-toggle{ display:flex; }
+    body.menu-open .nav-links{
+      display:flex; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:flex-start; gap:0;
+      background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 24px 20px;
+    }
+    body.menu-open .nav-links a{ padding: 12px 0; width:100%; border-bottom: 1px solid var(--line); }
+    section{ padding: 64px 0; }
+    .cat-grid{ grid-template-columns: 1fr; }
+    .steps{ grid-template-columns: 1fr; }
+    .footer-top{ grid-template-columns: 1fr; gap: 32px; }
+    .cta-box{ padding: 44px 24px; }
+    .hero{ padding: 56px 0 64px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#produtos" class="skip-link">Pular para o conteúdo</a>
+
+<header class="site">
+  <nav class="nav wrap">
+    <a href="#top" class="logo" aria-label="A Forma, início">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,15 15,80 85,80" fill="none" stroke="#D6FF3F" stroke-width="10"/></svg>
+      A FORMA
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#personalizado">Personalizados</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#materiais">Materiais</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn-outline btn-sm">Falar com a gente</a>
+      <a class="btn btn-primary btn-sm btn-wa" data-wa-link>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="mono-tag">IMPRESSÃO 3D SOB ENCOMENDA</span>
+        </div>
+        <h1 id="hero-title">Sua ideia, <em>camada por camada.</em></h1>
+        <p class="hero-sub">A gente transforma nome, logo ou referência em peça impressa em 3D: chaveiros, placas, kits e objetos de decoração — pensados e feitos pra você.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-wa" data-wa-link>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+            Pedir no WhatsApp
+          </a>
+          <a href="#produtos" class="btn btn-outline">Ver o que a gente faz</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="num">100%</span>
+            <span class="label">Peças sob encomenda</span>
+          </div>
+          <div class="trust-item">
+            <span class="num">3</span>
+            <span class="label">Materiais disponíveis</span>
+          </div>
+          <div class="trust-item">
+            <span class="num">Brasil</span>
+            <span class="label">Envio pra todo o país</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="print-frame">
+          <img src="images/cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D em PLA preto fosco, feita pela A Forma" width="704" height="738" loading="eager">
+          <div class="print-caption">
+            <span class="mono-tag">CRUZ COM FIOS</span>
+            <span class="mono-tag">PLA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section id="produtos" aria-labelledby="produtos-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="mono-tag">O QUE A GENTE IMPRIME</span>
+        <h2 id="produtos-title">Do chaveiro ao presente que ninguém mais tem</h2>
+        <p>Cada peça sai sob encomenda — você escolhe a cor, o texto e o acabamento.</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-photo">
+            <img src="images/bola-de-futevolei.jpg" alt="Chaveiros de futevôlei impressos em 3D, em quatro cores diferentes" loading="lazy" width="847" height="838">
+          </div>
+          <div class="cat-body">
+            <h3>Chaveiros personalizados</h3>
+            <p>Nomes, times, formas geométricas — do jeito que você imaginar, em resina ou PLA.</p>
+            <span class="mono-tag">PLA · RESINA</span>
+          </div>
+        </article>
+        <article class="cat-card">
+          <div class="cat-photo">
+            <img src="images/expositor-de-unhas.jpg" alt="Placa personalizada em formato de laço para nail designer, com nome e profissão gravados" loading="lazy" width="643" height="813">
+          </div>
+          <div class="cat-body">
+            <h3>Placas &amp; plaquinhas</h3>
+            <p>Para salão, escritório, porta ou mesa — com o nome e o cargo que você quiser.</p>
+            <span class="mono-tag">PLA · CORES SOB ENCOMENDA</span>
+          </div>
+        </article>
+        <article class="cat-card">
+          <div class="cat-photo">
+            <img src="images/quebra-cabeca-de-pintar.jpg" alt="Kit quebra-cabeça Lave & Pinte, reutilizável, com canetinhas coloridas" loading="lazy" width="620" height="787">
+          </div>
+          <div class="cat-body">
+            <h3>Kits &amp; brindes</h3>
+            <p>Kits de colorir, brindes corporativos e lembrancinhas em lote, com a sua marca.</p>
+            <span class="mono-tag">A PARTIR DE 10 UN.</span>
+          </div>
+        </article>
+        <article class="cat-card">
+          <div class="cat-photo">
+            <img src="images/cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D" loading="lazy" width="704" height="738">
+          </div>
+          <div class="cat-body">
+            <h3>Suportes &amp; decoração</h3>
+            <p>Organizadores, suportes de celular e peças decorativas pensadas pro seu espaço.</p>
+            <span class="mono-tag">PLA · PETG</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONALIZAÇÃO ===== -->
+  <section id="personalizado" class="custom" aria-labelledby="custom-title">
+    <div class="wrap">
+      <div class="custom-copy">
+        <span class="mono-tag">FEITO PRA VOCÊ</span>
+        <h2 id="custom-title">Manda o nome, a gente cuida do resto</h2>
+        <p style="margin-top:16px; color:var(--ink-dim); font-size:16px;">É só chamar no WhatsApp com o que você tem em mente — a gente confirma o design antes de imprimir qualquer coisa.</p>
+        <ul class="custom-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><b>Nome, logo ou foto de referência</b> — envie pelo WhatsApp e explique a ideia.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><b>Prévia do modelo 3D</b> — você aprova o design antes da gente imprimir.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><b>Cor e material à sua escolha</b> — dentro das opções disponíveis pra cada peça.</span>
+          </li>
+        </ul>
+        <div class="hero-cta" style="margin-top:32px;">
+          <a class="btn btn-primary btn-wa" data-wa-link>Personalizar a minha peça</a>
+        </div>
+      </div>
+      <div class="plaque-demo">
+        <div class="plaque">
+          <img src="images/arminha-personalizada.jpg" alt="Chaveiro personalizado impresso em 3D com o nome 'Marcos A' gravado, feito pela A Forma" loading="lazy" width="630" height="769">
+          <div class="plaque-caption">
+            <span class="plaque-name">"MARCOS A"</span>
+            <span class="plaque-role">Chaveiro personalizado · pedido real de cliente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section id="como-funciona" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="mono-tag">DO PEDIDO À ENTREGA</span>
+        <h2 id="how-title">Como funciona</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Você manda a ideia</h3>
+          <p>Nome, logo ou referência, pelo WhatsApp — sem complicação.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>A gente modela</h3>
+          <p>Preparamos o modelo 3D e mostramos pra você antes de imprimir.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Imprimimos</h3>
+          <p>Camada por camada, no material certo pra sua peça.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Você recebe</h3>
+          <p>Retirada combinada ou envio para todo o Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATERIAIS ===== -->
+  <section id="materiais" class="materials" aria-labelledby="mat-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="mono-tag">ESPECIFICAÇÕES</span>
+        <h2 id="mat-title">Materiais que usamos</h2>
+        <p>Cada peça pede um material diferente — a gente indica o melhor pra sua ideia.</p>
+      </div>
+      <div class="mat-grid">
+        <div class="mat-card">
+          <span class="mono-tag">PLA</span>
+          <h3>Leve e colorido</h3>
+          <p>Ideal pra chaveiros, placas e decoração. Grande variedade de cores e acabamento fosco ou brilhante.</p>
+        </div>
+        <div class="mat-card">
+          <span class="mono-tag">PETG</span>
+          <h3>Resistente ao dia a dia</h3>
+          <p>Mais durável e flexível, indicado pra peças de uso frequente ou exposição ao sol.</p>
+        </div>
+        <div class="mat-card">
+          <span class="mono-tag">RESINA</span>
+          <h3>Alta definição</h3>
+          <p>Pra peças pequenas e detalhadas, com acabamento liso e riqueza de detalhes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VÍDEO DE DEMONSTRAÇÃO ===== -->
+  <section id="video" aria-labelledby="video-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="mono-tag">VEJA NA PRÁTICA</span>
+        <h2 id="video-title">Do arquivo 3D até a peça pronta</h2>
+        <p>Um vídeo curto mostrando o processo de impressão, do início ao acabamento final.</p>
+      </div>
+
+      <!--
+        COMO ATIVAR O VÍDEO (escolha só uma das duas opções abaixo):
+
+        OPÇÃO A, vídeo do YouTube (mais leve, recomendado):
+          1. Suba o vídeo no YouTube (pode ser "não listado").
+          2. Pegue o ID na URL: youtube.com/watch?v=ESSE_TRECHO_AQUI
+          3. Copie o bloco IFRAME_YOUTUBE mais abaixo, cole aqui dentro
+             de video-frame, e troque SEU_ID_DO_VIDEO pelo ID real.
+
+        OPÇÃO B, arquivo de vídeo enviado no repositório:
+          1. Comprima o vídeo em formato mp4, poucos MB, 720p ou 1080p.
+          2. Suba na pasta videos/ do repositório, mesmo processo usado
+             para a pasta images/.
+          3. Copie o bloco VIDEO_ARQUIVO mais abaixo, cole aqui dentro
+             de video-frame, e troque demonstracao.mp4 pelo nome real.
+
+        Nos dois casos, apague a div video-placeholder depois de colar
+        o bloco escolhido.
+
+        Bloco IFRAME_YOUTUBE, copie a partir daqui:
+
+        <iframe src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" title="Video de demonstracao A Forma" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        Bloco VIDEO_ARQUIVO, copie a partir daqui:
+
+        <video controls preload="metadata" poster="images/cruz-com-fios.jpg"><source src="videos/demonstracao.mp4" type="video/mp4">Seu navegador nao suporta video em HTML5.</video>
+      -->
+      <div class="video-frame">
+        <div class="video-placeholder">
+          <div class="play-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p>Vídeo de demonstração em breve — veja o comentário no código pra ativar quando tiver o arquivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROVA SOCIAL ===== -->
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <div>
+        <span class="mono-tag">QUEM JÁ PEDIU</span>
+        <h2 id="proof-title" style="margin-top:14px;">Peça feita, cliente satisfeito</h2>
+        <div style="margin-top:32px;">
+          <div class="quote">
+            <p>"Pedi uma placa personalizada pro meu espaço e ficou exatamente como eu queria, ainda melhor."</p>
+            <cite>Cliente A Forma</cite>
+          </div>
+          <div class="quote">
+            <p>"Rapidez no atendimento pelo WhatsApp e o acabamento da peça surpreendeu."</p>
+            <cite>Cliente A Forma</cite>
+          </div>
+        </div>
+      </div>
+      <div class="insta-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        <h3>Acompanha nos bastidores</h3>
+        <p>Mostramos cada peça sendo impressa e finalizada no nosso Instagram.</p>
+        <a href="https://instagram.com/aforma3d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Seguir @aforma3d</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-final" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2 id="cta-title">Tem uma ideia? Manda pra gente.</h2>
+        <p>Resposta rápida pelo WhatsApp, orçamento sem compromisso.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-wa" data-wa-link>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a href="#top" class="logo" aria-label="A Forma, início">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,15 15,80 85,80" fill="none" stroke="#D6FF3F" stroke-width="10"/></svg>
+          A FORMA
+        </a>
+        <p>Impressão 3D personalizada: chaveiros, placas, kits e decoração, feitos sob encomenda.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#personalizado">Personalizados</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#materiais">Materiais</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-wa-link>WhatsApp</a></li>
+          <li><a href="mailto:contato@aforma3d.com.br">contato@aforma3d.com.br</a></li>
+          <li><a href="https://instagram.com/aforma3d" target="_blank" rel="noopener">@aforma3d</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> A Forma. Todos os direitos reservados.</p>
+      <p>Impressão 3D personalizada</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa-link aria-label="Chamar A Forma no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+</a>
+
+<script>
+  // ============================================================
+  // EDITE AQUI: dados de contato reais da loja
+  // ============================================================
+  const CONFIG = {
+    whatsappNumber: '5500000000000', // formato: 55 + DDD + número, só dígitos
+    whatsappMessage: 'Olá! Vi o site da A Forma e quero saber mais sobre impressão 3D personalizada.'
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Monta todos os links de WhatsApp a partir do CONFIG
+    const waHref = 'https://wa.me/' + CONFIG.whatsappNumber + '?text=' + encodeURIComponent(CONFIG.whatsappMessage);
+    document.querySelectorAll('[data-wa-link]').forEach(el => {
+      el.setAttribute('href', waHref);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener');
+    });
+
+    // Ano no rodapé
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('menu-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
