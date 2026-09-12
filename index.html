@@ -33,7 +33,7 @@
   "name": "A Forma",
   "description": "Loja de impressão 3D personalizada: chaveiros, placas, kits e peças decorativas sob encomenda.",
   "image": "https://www.aforma3d.com.br/og-image.jpg",
-  "telephone": "+5513991184130",
+  "telephone": "+55XXXXXXXXXXX",
   "email": "contato@aforma3d.com.br",
   "address": {
     "@type": "PostalAddress",
@@ -256,13 +256,13 @@
   .step h3{ font-size: 1.02rem; margin-bottom: 8px; }
   .step p{ font-size: 14px; color: var(--ink-dim); }
 
-   /* ---------- Materiais ---------- */ 
+  /* ---------- Materiais ---------- */
   .materials{ background: var(--bg-alt); }
   .mat-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
   .mat-card{ background: var(--bg-alt); padding: 30px 26px; }
   .mat-card .mono-tag{ font-size: 13px; color: var(--lime); margin-bottom: 10px; display:block; }
   .mat-card h3{ font-size: 1.1rem; margin-bottom: 10px; }
-  .mat-card p{ font-size: 14px; color: var(--ink-dim); } -->
+  .mat-card p{ font-size: 14px; color: var(--ink-dim); }
 
   /* ---------- Vídeo de demonstração ---------- */
   .video-frame{
@@ -288,6 +288,40 @@
   }
   .video-placeholder .play-icon svg{ width:20px; height:20px; color: var(--lime); margin-left:3px; }
   .video-placeholder p{ font-size: 14.5px; color: var(--ink-dim); max-width: 32ch; }
+
+  /* Variante vertical, pra Shorts / Reels (9:16 em vez de 16:9) */
+  .video-frame.video-frame-vertical{
+    max-width: 380px;
+    aspect-ratio: 9/16;
+  }
+
+  /* ---------- Dois GIFs lado a lado ---------- */
+  .gif-row{
+    display:flex; gap:16px; flex-wrap:wrap;
+    max-width: 860px; margin: 0 auto;
+  }
+  .gif-row .gif-frame{
+    position:relative; flex:1; min-width: 260px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    background: var(--surface);
+    overflow:hidden;
+  }
+  .gif-row .gif-frame img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .gif-row .gif-placeholder{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+    text-align:center; padding: 20px;
+  }
+  .gif-row .gif-placeholder .play-icon{
+    width:52px; height:52px; border-radius:50%;
+    border: 1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .gif-row .gif-placeholder .play-icon svg{ width:18px; height:18px; color: var(--lime); }
+  .gif-row .gif-placeholder p{ font-size: 13.5px; color: var(--ink-dim); max-width: 24ch; }
 
   /* ---------- Social proof ---------- */
   .proof .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 64px; }
@@ -392,7 +426,7 @@
       <li><a href="#produtos">Produtos</a></li>
       <li><a href="#personalizado">Personalizados</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
-      <!--<li><a href="#materiais">Materiais</a></li>-->
+      <li><a href="#materiais">Materiais</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <div class="nav-cta">
@@ -416,10 +450,10 @@
       <div class="hero-copy">
         <div class="hero-eyebrow">
           <span class="dot" aria-hidden="true"></span>
-          <span class="mono-tag">A PRONTA ENTREGA OU SOB ENCOMENDA</span>
+          <span class="mono-tag">IMPRESSÃO 3D SOB ENCOMENDA</span>
         </div>
         <h1 id="hero-title">Sua ideia, <em>camada por camada.</em></h1>
-        <p class="hero-sub">A gente transforma nome, logo ou referência em peça impressa em 3D: , placas, kits e objetos de decoração — pensados e feitos pra você.</p>
+        <p class="hero-sub">A gente transforma nome, logo ou referência em peça impressa em 3D: chaveiros, placas, kits e objetos de decoração — pensados e feitos pra você.</p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-wa" data-wa-link>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.6 9.3 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
@@ -428,7 +462,14 @@
           <a href="#produtos" class="btn btn-outline">Ver o que a gente faz</a>
         </div>
         <div class="hero-trust">
-        
+          <div class="trust-item">
+            <span class="num">100%</span>
+            <span class="label">Peças sob encomenda</span>
+          </div>
+          <div class="trust-item">
+            <span class="num">3</span>
+            <span class="label">Materiais disponíveis</span>
+          </div>
           <div class="trust-item">
             <span class="num">Brasil</span>
             <span class="label">Envio pra todo o país</span>
@@ -437,10 +478,10 @@
       </div>
       <div class="hero-visual">
         <div class="print-frame">
-          <img src="images/cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D em PLA preto fosco, feita pela A Forma" width="704" height="738" loading="eager">
+          <img src="cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D em PLA preto fosco, feita pela A Forma" width="704" height="738" loading="eager">
           <div class="print-caption">
-            <span class="mono-tag"></span>
-            <span class="mono-tag"></span>
+            <span class="mono-tag">CRUZ COM FIOS</span>
+            <span class="mono-tag">PLA</span>
           </div>
         </div>
       </div>
@@ -458,42 +499,42 @@
       <div class="cat-grid">
         <article class="cat-card">
           <div class="cat-photo">
-            <img src="images/bola-de-futevolei.jpg" alt="Chaveiros de futevôlei impressos em 3D, em quatro cores diferentes" loading="lazy" width="847" height="838">
+            <img src="bola-de-futevolei.jpg" alt="Chaveiros de futevôlei impressos em 3D, em quatro cores diferentes" loading="lazy" width="847" height="838">
           </div>
           <div class="cat-body">
             <h3>Chaveiros personalizados</h3>
-            <p>Nomes, times, formas geométricas — do jeito que você imaginar.</p>
-            <span class="mono-tag"></span>
+            <p>Nomes, times, formas geométricas — do jeito que você imaginar, em resina ou PLA.</p>
+            <span class="mono-tag">PLA · RESINA</span>
           </div>
         </article>
         <article class="cat-card">
           <div class="cat-photo">
-            <img src="images/expositor-de-unhas.jpg" alt="Placa personalizada em formato de laço para nail designer, com nome e profissão gravados" loading="lazy" width="643" height="813">
+            <img src="expositor-de-unhas.jpg" alt="Placa personalizada em formato de laço para nail designer, com nome e profissão gravados" loading="lazy" width="643" height="813">
           </div>
           <div class="cat-body">
             <h3>Placas &amp; plaquinhas</h3>
             <p>Para salão, escritório, porta ou mesa — com o nome e o cargo que você quiser.</p>
-            <span class="mono-tag"></span>
+            <span class="mono-tag">PLA · CORES SOB ENCOMENDA</span>
           </div>
         </article>
         <article class="cat-card">
           <div class="cat-photo">
-            <img src="images/quebra-cabeca-de-pintar.jpg" alt="Kit quebra-cabeça Lave & Pinte, reutilizável, com canetinhas coloridas" loading="lazy" width="620" height="787">
+            <img src="quebra-cabeca-de-pintar.jpg" alt="Kit quebra-cabeça Lave & Pinte, reutilizável, com canetinhas coloridas" loading="lazy" width="620" height="787">
           </div>
           <div class="cat-body">
             <h3>Kits &amp; brindes</h3>
             <p>Kits de colorir, brindes corporativos e lembrancinhas em lote, com a sua marca.</p>
-            <span class="mono-tag"></span>
+            <span class="mono-tag">A PARTIR DE 10 UN.</span>
           </div>
         </article>
         <article class="cat-card">
           <div class="cat-photo">
-            <img src="images/cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D" loading="lazy" width="704" height="738">
+            <img src="cruz-com-fios.jpg" alt="Peça decorativa em formato de cruz com fios, impressa em 3D" loading="lazy" width="704" height="738">
           </div>
           <div class="cat-body">
             <h3>Suportes &amp; decoração</h3>
             <p>Organizadores, suportes de celular e peças decorativas pensadas pro seu espaço.</p>
-            <span class="mono-tag"></span>
+            <span class="mono-tag">PLA · PETG</span>
           </div>
         </article>
       </div>
@@ -527,10 +568,10 @@
       </div>
       <div class="plaque-demo">
         <div class="plaque">
-          <img src="images/arminha-personalizada.jpg" alt="Chaveiro personalizado impresso em 3D com o nome 'Marcos A' gravado, feito pela A Forma" loading="lazy" width="630" height="769">
+          <img src="arminha-personalizada.jpg" alt="Chaveiro personalizado impresso em 3D com o nome 'Marcos A' gravado, feito pela A Forma" loading="lazy" width="630" height="769">
           <div class="plaque-caption">
-            <span class="plaque-name"></span>
-            <span class="plaque-role"></span>
+            <span class="plaque-name">"MARCOS A"</span>
+            <span class="plaque-role">Chaveiro personalizado · pedido real de cliente</span>
           </div>
         </div>
       </div>
@@ -569,7 +610,7 @@
     </div>
   </section>
 
-  <!-- ===== MATERIAIS ===== 
+  <!-- ===== MATERIAIS ===== -->
   <section id="materiais" class="materials" aria-labelledby="mat-title">
     <div class="wrap">
       <div class="section-head">
@@ -594,58 +635,48 @@
           <p>Pra peças pequenas e detalhadas, com acabamento liso e riqueza de detalhes.</p>
         </div>
       </div>
-    </div> -->
+    </div>
   </section>
 
-  <!-- ===== VÍDEO DE DEMONSTRAÇÃO ===== -->
+  <!-- ===== GIFS DE DEMONSTRAÇÃO ===== -->
   <section id="video" aria-labelledby="video-title">
     <div class="wrap">
       <div class="section-head">
-        <span class="mono-tag">BRIQUEDOS SENSORIAIS</span>
-        <h2 id="video-title">Brinquedos sensoriais e anti-stress</h2>
-       <!-- <p>Um vídeo curto mostrando o processo de impressão, do início ao acabamento final.</p> -->
+        <span class="mono-tag">VEJA NA PRÁTICA</span>
+        <h2 id="video-title">Do arquivo 3D até a peça pronta</h2>
+        <p>Duas animações curtas mostrando o processo de impressão, do início ao acabamento final.</p>
       </div>
 
       <!--
-        COMO ATIVAR O VÍDEO (escolha só uma das duas opções abaixo):
+        COMO ATIVAR OS GIFS:
+          1. Suba os dois arquivos .gif na pasta images/ do repositório
+             (mesmo processo usado para as fotos dos produtos).
+          2. Em cada gif-frame abaixo, apague a div gif-placeholder
+             correspondente.
+          3. No lugar dela, cole uma tag <img>, por exemplo:
 
-        OPÇÃO A, vídeo do YouTube (mais leve, recomendado):
-          1. Suba o vídeo no YouTube (pode ser "não listado").
-          2. Pegue o ID na URL: youtube.com/watch?v=ESSE_TRECHO_AQUI
-          3. Copie o bloco IFRAME_YOUTUBE mais abaixo, cole aqui dentro
-             de video-frame, e troque SEU_ID_DO_VIDEO pelo ID real.
+             <img src="images/gif-1.gif" alt="Descreva o que esse GIF mostra" loading="lazy">
 
-        OPÇÃO B, arquivo de vídeo enviado no repositório:
-          1. Comprima o vídeo em formato mp4, poucos MB, 720p ou 1080p.
-          2. Suba na pasta videos/ do repositório, mesmo processo usado
-             para a pasta images/.
-          3. Copie o bloco VIDEO_ARQUIVO mais abaixo, cole aqui dentro
-             de video-frame, e troque demonstracao.mp4 pelo nome real.
-
-        Nos dois casos, apague a div video-placeholder depois de colar
-        o bloco escolhido.
-
-        Bloco IFRAME_YOUTUBE, copie a partir daqui:
-
-        <iframe src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" title="Video de demonstracao A Forma" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        Bloco VIDEO_ARQUIVO, copie a partir daqui:
-
-        <video controls preload="metadata" poster="images/cruz-com-fios.jpg"><source src="videos/demonstracao.mp4" type="video/mp4">Seu navegador nao suporta video em HTML5.</video>
+          4. Troque "images/gif-1.gif" e "images/gif-2.gif" pelos nomes
+             reais dos seus arquivos, e o texto do alt pela descrição
+             real de cada animação.
       -->
-      
-     <div class="gif-row">
-       <div class="gif-frame"> 
-       <img src="images/estrela.gif" alt="Animação mostrando o processo de impressão 3D da A Forma" loading="lazy">
-       </div>  
-       <img src="images/ovo.gif" alt="Animação mostrando o processo de impressão 3D da A Forma" loading="lazy">
-       </div>
-    </div>
-    </div>
-          <!-- <div class="play-icon" aria-hidden="true"> -->
-            <!-- <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> -->
+      <div class="gif-row">
+        <div class="gif-frame">
+          <div class="gif-placeholder">
+            <div class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p>GIF 1 em breve</p>
           </div>
-          <p></p>
+        </div>
+        <div class="gif-frame">
+          <div class="gif-placeholder">
+            <div class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p>GIF 2 em breve</p>
+          </div>
         </div>
       </div>
     </div>
@@ -655,7 +686,7 @@
   <section class="proof" aria-labelledby="proof-title">
     <div class="wrap">
       <div>
-       <!-- <span class="mono-tag">QUEM JÁ PEDIU</span>
+        <span class="mono-tag">QUEM JÁ PEDIU</span>
         <h2 id="proof-title" style="margin-top:14px;">Peça feita, cliente satisfeito</h2>
         <div style="margin-top:32px;">
           <div class="quote">
@@ -665,14 +696,14 @@
           <div class="quote">
             <p>"Rapidez no atendimento pelo WhatsApp e o acabamento da peça surpreendeu."</p>
             <cite>Cliente A Forma</cite>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="insta-card">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
         <h3>Acompanha nos bastidores</h3>
         <p>Mostramos cada peça sendo impressa e finalizada no nosso Instagram.</p>
-        <a href="https://instagram.com/aforma.oficial" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Seguir @aforma.oficial</a>
+        <a href="https://instagram.com/aforma3d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Seguir @aforma3d</a>
       </div>
     </div>
   </section>
@@ -711,15 +742,15 @@
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#personalizado">Personalizados</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
-         <!-- <li><a href="#materiais">Materiais</a></li> -->
+          <li><a href="#materiais">Materiais</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contato</h4>
         <ul>
           <li><a data-wa-link>WhatsApp</a></li>
-          <!-- <li><a href="mailto:contato@aforma3d.com.br">contato@aforma3d.com.br</a></li> -->
-          <li><a href="https://instagram.com/aforma.oficial" target="_blank" rel="noopener">@aforma.oficial</a></li>
+          <li><a href="mailto:contato@aforma3d.com.br">contato@aforma3d.com.br</a></li>
+          <li><a href="https://instagram.com/aforma3d" target="_blank" rel="noopener">@aforma3d</a></li>
         </ul>
       </div>
     </div>
@@ -739,7 +770,7 @@
   // EDITE AQUI: dados de contato reais da loja
   // ============================================================
   const CONFIG = {
-    whatsappNumber: '5513991184130', // formato: 55 + DDD + número, só dígitos
+    whatsappNumber: '5500000000000', // formato: 55 + DDD + número, só dígitos
     whatsappMessage: 'Olá! Vi o site da A Forma e quero saber mais sobre impressão 3D personalizada.'
   };
 
